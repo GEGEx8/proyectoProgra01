@@ -4,6 +4,8 @@
  */
 package modulo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author gomez
@@ -20,13 +22,8 @@ public class jugador {
 
     // Guarda las decisiones que toma durante la historia
     private ArrayList<String> historial;
-
-    public jugador() {
-        
-    }
     
-    
-    public Jugador(String nombre) {
+    public jugador(String nombre) {
 
         this.nombre = nombre;
 
