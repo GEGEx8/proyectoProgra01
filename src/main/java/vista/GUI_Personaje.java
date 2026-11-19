@@ -31,11 +31,12 @@ public class GUI_Personaje extends javax.swing.JFrame {
         pnlBack = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
         btnContinuar = new javax.swing.JButton();
-        btnNuevo = new javax.swing.JButton();
-        btnNuevo1 = new javax.swing.JButton();
-        btnNuevo4 = new javax.swing.JButton();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jLabel1 = new javax.swing.JLabel();
+        btnMenu = new javax.swing.JButton();
+        btnReiniciar = new javax.swing.JButton();
+        btnProgreso = new javax.swing.JButton();
+        btnHistorial = new javax.swing.JButton();
+        prgProgresoDia = new javax.swing.JProgressBar();
+        lblProgresoDia = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -57,43 +58,51 @@ public class GUI_Personaje extends javax.swing.JFrame {
         btnContinuar.setFocusPainted(false);
         pnlBack.add(btnContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
 
-        btnNuevo.setBackground(new java.awt.Color(0, 102, 0));
-        btnNuevo.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
-        btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
-        btnNuevo.setText("Menu principal");
-        btnNuevo.setBorderPainted(false);
-        btnNuevo.setFocusPainted(false);
-        btnNuevo.addActionListener(this::btnNuevoActionPerformed);
-        pnlBack.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, -1));
+        btnMenu.setBackground(new java.awt.Color(0, 102, 0));
+        btnMenu.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
+        btnMenu.setForeground(new java.awt.Color(255, 255, 255));
+        btnMenu.setText("Menu principal");
+        btnMenu.setBorderPainted(false);
+        btnMenu.setFocusPainted(false);
+        btnMenu.addActionListener(this::btnMenuActionPerformed);
+        pnlBack.add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, -1));
 
-        btnNuevo1.setBackground(new java.awt.Color(0, 102, 0));
-        btnNuevo1.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
-        btnNuevo1.setForeground(new java.awt.Color(255, 255, 255));
-        btnNuevo1.setText("Reiniciar aventura");
-        btnNuevo1.setBorderPainted(false);
-        btnNuevo1.setFocusPainted(false);
-        pnlBack.add(btnNuevo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, -1, -1));
+        btnReiniciar.setBackground(new java.awt.Color(0, 102, 0));
+        btnReiniciar.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
+        btnReiniciar.setForeground(new java.awt.Color(255, 255, 255));
+        btnReiniciar.setText("Reiniciar aventura");
+        btnReiniciar.setBorderPainted(false);
+        btnReiniciar.setFocusPainted(false);
+        pnlBack.add(btnReiniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, -1, -1));
 
-        btnNuevo4.setBackground(new java.awt.Color(0, 102, 0));
-        btnNuevo4.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
-        btnNuevo4.setForeground(new java.awt.Color(255, 255, 255));
-        btnNuevo4.setText("Historial");
-        btnNuevo4.setBorderPainted(false);
-        btnNuevo4.setFocusPainted(false);
-        pnlBack.add(btnNuevo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
+        btnProgreso.setBackground(new java.awt.Color(0, 102, 0));
+        btnProgreso.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
+        btnProgreso.setForeground(new java.awt.Color(255, 255, 255));
+        btnProgreso.setText("Consultar progreso");
+        btnProgreso.setBorderPainted(false);
+        btnProgreso.setFocusPainted(false);
+        pnlBack.add(btnProgreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
 
-        jProgressBar1.setFont(new java.awt.Font("Rockwell", 0, 24)); // NOI18N
-        jProgressBar1.setForeground(new java.awt.Color(255, 255, 255));
-        jProgressBar1.setValue(50);
-        jProgressBar1.setName(""); // NOI18N
-        jProgressBar1.setString("Semana");
-        pnlBack.add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 580, 20));
+        btnHistorial.setBackground(new java.awt.Color(0, 102, 0));
+        btnHistorial.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
+        btnHistorial.setForeground(new java.awt.Color(255, 255, 255));
+        btnHistorial.setText("Historial");
+        btnHistorial.setBorderPainted(false);
+        btnHistorial.setFocusPainted(false);
+        pnlBack.add(btnHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Blackadder ITC", 0, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setLabelFor(jProgressBar1);
-        jLabel1.setText("Nombre dia");
-        pnlBack.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, 180, -1));
+        prgProgresoDia.setFont(new java.awt.Font("Rockwell", 0, 24)); // NOI18N
+        prgProgresoDia.setForeground(new java.awt.Color(255, 255, 255));
+        prgProgresoDia.setValue(50);
+        prgProgresoDia.setName(""); // NOI18N
+        prgProgresoDia.setString("Semana");
+        pnlBack.add(prgProgresoDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 580, 20));
+
+        lblProgresoDia.setFont(new java.awt.Font("Blackadder ITC", 0, 18)); // NOI18N
+        lblProgresoDia.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblProgresoDia.setLabelFor(prgProgresoDia);
+        lblProgresoDia.setText("Nombre dia");
+        pnlBack.add(lblProgresoDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, 180, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -109,9 +118,9 @@ public class GUI_Personaje extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnNuevoActionPerformed
+    }//GEN-LAST:event_btnMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,12 +149,13 @@ public class GUI_Personaje extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnContinuar;
-    private javax.swing.JButton btnNuevo;
-    private javax.swing.JButton btnNuevo1;
-    private javax.swing.JButton btnNuevo4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JButton btnHistorial;
+    private javax.swing.JButton btnMenu;
+    private javax.swing.JButton btnProgreso;
+    private javax.swing.JButton btnReiniciar;
+    private javax.swing.JLabel lblProgresoDia;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlBack;
+    private javax.swing.JProgressBar prgProgresoDia;
     // End of variables declaration//GEN-END:variables
 }
